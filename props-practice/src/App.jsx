@@ -5,14 +5,7 @@ import "./App.css";
 
 function App() {
   const personElements = PersonData.map((person) => {
-    return (
-      <Person
-        img={person.img}
-        name={person.name}
-        position={person.position}
-        quote={person.quote}
-      />
-    );
+    return <Person key={person.id} {...person} />;
   });
   return <>{personElements}</>;
 }
